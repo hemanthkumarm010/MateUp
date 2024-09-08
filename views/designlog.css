@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: whitesmoke; /* Background color for the header */
+    display: flex;
+    align-items: center; /* Align items in the header */
+}
+
+header .logo {
+    display: flex;
+    align-items: center; /* Align logo and text vertically */
+    font-size: 40px; /* Adjust the font size of the logo text */
+  font-weight: bold; /* Make the text bold */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Choose a suitable font-family */
+}
+
+header .logo img {
+    width: 100px; /* Adjust the size of the logo */
+    height: auto;
+}
+
+header .logo .mate{
+    color: #f24c00; /* Color for the 'Mate' part */
+  font-size: 40px; /* Adjust the font size of 'Mate' */
+}
+
+header .logo .highlight{
+    color: grey; /* Color for the 'Up' part */
+  font-size: 40px; /* Adjust the font size of 'Up' */
+  margin-left: 0px; /* Adjust space between 'Mate' and 'Up' */
+}
+
+header .brand-name {
+    font-size: 3rem; /* Larger font size for MateUp */
+    margin-left: 10px; /* Space between the logo and text */
+    color: #f24c00; /* Ensure the text color matches the design */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 800;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start (left side) of the container */
+    align-items: flex-start; /* Align items to the top of the container */
+    margin-top: 50px; /* Adjust the margin-top value to space out from the top */
+    width: 100%;
+    max-width: 1200px; /* Set a max width for the container */
+}
+
+.login-container {
+    background-color: #fcaf58;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    margin:0 40px;
+}
+
+.image-container img {
+    width: 100%; /* Make image responsive */
+    height: auto;
+    max-width: 15cm; /* Keep the maximum width constraint */
+    max-height: 10cm; /* Keep the maximum height constraint */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.form-group input {
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f24c00;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #C4DFE6;
+}
+
+.new-user {
+    margin-top: 10px;
+    color: #333;
+}
+
+.new-user a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.new-user a:hover {
+    text-decoration: underline;
+}
+
+.warning {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+.material-icons {
+    position: absolute;
+    top: 50%;
+    right: 35px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #ccc;
+}

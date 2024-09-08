@@ -1,0 +1,686 @@
+body, h1, header, section, main, div, p, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    background: whitesmoke; /* Light background color */
+  }
+  
+  h2, h1 {
+    font-family:'Poppins', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  header {
+    z-index: 1000; /* Ensure header is above other elements */
+    position: fixed; /* Fixed position to keep it visible */
+    top: 0; /* Position at the top of the viewport */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Full width */
+    background-color: whitesmoke; /* Light green background color */
+    color: #000; /* Black text color */
+    padding: 20px 40px; /* Padding inside the header */
+    display: flex;
+    justify-content: space-between; /* Space between logo and icons */
+    align-items: center; /* Center align items vertically */
+    height: 80px; /* Height of the header */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font for the header */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Box shadow for header */
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-left: -70px; /* Adjust margin to move logo to the left */
+  }
+  
+  .logo-img {
+    max-height: 182px; /* Adjust the maximum height of the logo */
+    margin-right: -40px; /* Space between logo and text */
+  }
+  
+  .logo-text {
+    font-size: 40px; /* Adjust the font size of the logo text */
+    font-weight: bold; /* Make the text bold */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Choose a suitable font-family */
+    text-transform: none; /* Convert text to uppercase */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .logo-textf {
+    font-size: 40px; /* Adjust the font size of the logo text */
+    font-weight: bold; /* Make the text bold */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Choose a suitable font-family */
+    text-transform: none; /* Convert text to uppercase */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .logo-text .mate {
+    color: #f24c00; /* Color for the 'Mate' part */
+    font-size: 40px; /* Adjust the font size of 'Mate' */
+  }
+  .logo-textf .mate {
+    color: #f24c00; /* Color for the 'Mate' part */
+    font-size: 40px; /* Adjust the font size of 'Mate' */
+  }
+  
+  .logo-text .highlight {
+    color: grey; /* Color for the 'Up' part */
+    font-size: 40px; /* Adjust the font size of 'Up' */
+    margin-left: 0px; /* Adjust space between 'Mate' and 'Up' */
+  }
+  .logo-textf .highlight {
+    color: grey; /* Color for the 'Up' part */
+    font-size: 40px; /* Adjust the font size of 'Up' */
+    margin-left: 0px; /* Adjust space between 'Mate' and 'Up' */
+  }
+  
+  .navbar {
+    flex: 1; /* Take remaining space in the header */
+    text-align: right; /* Center align the nav links */
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    display: inline-block;
+    margin-right: 20px; /* Space between nav items */
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: #333; /* Link color */
+    font-size: 18px; /* Font size */
+    transition: color 0.3s; /* Smooth transition for color change */
+  }
+  
+  .navbar ul li a:hover {
+    color: #fcaf50; /* Orange color on hover */
+  }
+  .social-icon {
+    color: #000; /* Black color for social icons */
+    font-size: 24px; /* Font size of social icons */
+    text-decoration: none; /* Remove underline from icons */
+  }
+  
+  header .social-icons {
+    display: flex;
+    gap: 15px; /* Space between social icons */
+  }
+  
+  header .social-icon {
+    color: #000; /* Default color for social icons */
+    font-size: 24px; /* Size of the social icons */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    padding: 110px;
+  }
+  
+  .intro {
+    text-align: center;
+    margin-top: 10vh; /* Move the whole intro section down */
+  }
+  
+  .tagline {
+    background-color: #edc089 ; /* Pink background */
+    padding: 5px 10px; /* Reduced padding */
+    display: inline-block;
+    font-size: 14px; /* Smaller font size */
+    transform: translate(-10px, 100px);
+    border-radius: 25px; /* Rounded corners */
+  }
+  
+  .intro h1 {
+    font-size: 48px; /* Larger font size */
+    font-weight: bold;
+    margin-top: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Custom font family */
+  }
+  
+  .subtitle {
+    font-size: 24px; /* Font size for the subtitle */
+    margin-top: 0px; /* Margin to create space between h1 and subtitle */
+    color: #808080; /* Grey text color */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Custom font family */
+  }
+  
+  .intro-image {
+    margin-top: 20px; /* Space between the subtitle and the image */
+    max-width: 60%; /* Decreased max-width to make the image smaller */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: add rounded corners to the image */
+    margin-bottom: 60px; 
+  }
+  
+  .info-box {
+    width: 80%;
+    margin-top: 20px; /* Space between intro section and info box */
+  }
+  
+  .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center content vertically */
+  border: 1px solid #ccc; /* Border for the box */
+  border-radius: 10px; /* Rounded corners for the box */
+  overflow: hidden;
+  }
+  
+  .left-box, .right-box {
+  width: 45%; /* Reduce width of each box to be placed side-by-side */
+  padding: 20px;
+  }
+  
+  .left-box {
+  background-color: #f9f9f9; /* Light background for left box */
+  }
+  
+  .right-box {
+  background-color: #fff; /* White background for right box */
+  }
+  
+  /* About Us Section */
+  .about-us {
+    position: relative; /* To position the pseudo-element */
+    width: 80%;
+    margin: 70px auto; /* Center align the section horizontally */
+    text-align: center; /* Center align the text */
+    background-color: #fff; /* White background for the section */
+    padding: 50px; /* Padding inside the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the section */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Good font for the section */
+    
+  }
+  
+  .about-us::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background-color: #fcaf50;
+    border-radius: 10px; /* Slightly more rounded to appear outside the main box */
+    z-index: -1; /* Place it behind the main box */
+  }
+  
+  
+  .about-us h2 {
+    font-size: 32px; /* Font size for the heading */
+    color: #f24c00; /* Dark text color */
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  .about-us p {
+    font-size: 18px; /* Font size for the paragraph */
+    color: #666; /* Grey text color */
+    line-height: 1.6; /* Line height for readability */
+  }
+  
+  /* Options Section */
+  .find-roommate-section {
+    width: 80%;
+    margin: 0 auto; /* Center align the section horizontally */
+    display: flex;
+    justify-content: space-between; /* Space between the option boxes */
+    gap: 20px; /* Add gap between the boxes */
+  }
+  
+  .option-box {
+    flex: 1; /* Allow the boxes to take equal space */
+    background-color: #fff; /* White background */
+    border: 1px solid #ccc; /* Border for the box */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center align text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+  }
+  
+  .option-box h2 {
+    margin-bottom: 10px; /* Space below the
+  font-size: 24px; /* Font size for the heading */
+  color: #333; /* Dark text color */
+  }
+  
+  .option-box img {
+    max-width: 100%; /* Ensure images fit within their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Space below images */
+  }
+  
+  .option-box .find-roommate-btn {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding inside the button */
+    text-align: center; /* Center align text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline block */
+    font-size: 16px; /* Font size */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family */
+    margin-top: 10px; /* Space above the button */
+    cursor: pointer; /* Cursor pointer */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background-color */
+  }
+  
+  .option-box .find-roommate-btn:hover {
+    background-color: #19621c; /* Darker green background color on hover */
+  }
+  
+  /* Developers Section */
+  .developer img {
+    width: 100%; /* Ensures images take up full width of their container */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 250px; /* Adjust maximum width as needed */
+    max-height: 250px; /* Adjust maximum height as needed */
+    border-radius: 10px; /* Rounded corners for consistency */
+    object-fit: cover; /* Ensures the image covers the box without stretching */
+}
+
+  .developers-container {
+    background-color: #fff; /* White background for the container */
+    padding: 40px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners for the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 40px auto; /* Center align the box horizontally with margin */
+    width: 80%; /* Adjust width as needed */
+  }
+  
+  .developers-section {
+    text-align: center; /* Center align the content */
+  }
+  
+  .developers-section h2 {
+    font-size: xx-large;
+    padding-bottom: 3%;
+    position: relative;
+    display: inline-block;
+    color: #f24c00; /* Set the color to match the gradient */
+  }
+  
+  .developers-section h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 4px;
+    background: linear-gradient(90deg, #f24c00, red, grey); /* Gradient underline */
+    border-radius: 2px;
+  }
+  
+  .developer-box {
+    display: flex;
+    flex-wrap: wrap; /* Ensure boxes wrap to the next line if necessary */
+    gap: 20px; /* Space between developer boxes */
+    justify-content: center; /* Center align boxes horizontally */
+  }
+  
+  .developer {
+    width: 250px; /* Width of each developer box */
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ccc; /* Border for the box */
+    border-radius: 10px; /* Rounded corners for the box */
+    padding: 20px; /* Padding inside the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center align text */
+  }
+  
+  .developer h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333; /* Darker color for the heading */
+  }
+  
+  .developer p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666; /* Lighter color for the text */
+  }
+  
+  
+  .developer img {
+    max-width: 100%; /* Ensure images fit within their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Slight rounding for box corners */
+    margin-bottom: 10px; /* Space below the image */
+  }
+  
+  .name {
+    font-size: 18px; /* Font size for the name */
+    font-weight: bold; /* Bold text for the name */
+    margin: 10px 0 5px; /* Margin around the name */
+  }
+  
+  .role {
+    font-size: 16px; /* Font size for the role */
+    color: #777; /* Grey color for the role */
+    margin-bottom: 10px; /* Space below the role */
+  }
+  
+  .social-links {
+    margin-top: 10px; /* Space above social links */
+  }
+  
+  .social-links a {
+    color: #000; /* Black color for social icons */
+    font-size: 24px; /* Font size of social icons */
+    text-decoration: none; /* Remove underline from icons */
+    margin: 0 5px; /* Space between social icons */
+  }
+  
+  .social-links a:hover {
+    color: #666; /* Darker color on hover */
+  }
+  .login-btn {
+    background-color: #f24c00; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Increased padding for a bigger button */
+    text-align: center; /* Center align text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline block */
+    font-size: 18px; /* Increased font size */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family */
+    cursor: pointer; /* Cursor pointer */
+    border-radius: 8px; /* More rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background-color and transform */
+  }
+  
+  .login-btn:hover {
+    background-color: #C4DFE6; /* Darker green background color on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+  
+  /* Footer Section */
+  footer {
+    background-color: #fcaf50; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 40px 0; /* Padding for the footer */
+    width: 100%;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between; /* Space between the sections */
+    align-items: flex-start; /* Align items at the start */
+    width: 80%;
+    margin: 0 auto; /* Center align the content */
+  }
+  
+  .footer-left {
+    flex: 1; /* Left section takes equal space */
+  }
+  
+  .logo-textf{
+    transform: translate(60px, 7px);
+  }
+  
+  .footer-logo h3 {
+    font-size: 24px; /* Font size for the website name */
+    margin-bottom: 10px; /* Space below the website name */
+  }
+  
+  .footer-left .social-icons {
+    display: flex;
+    gap: 15px; /* Space between social icons */
+  }
+  
+  .footer-center {
+    flex: 2; /* Center section takes double space */
+    display: flex;
+    justify-content: space-between; /* Space between the sections */
+    gap: 40px; /* Space between sections */
+  }
+  
+  .footer-section {
+    flex: 1; /* Each section takes equal space */
+  }
+  
+  .footer-section h4 {
+    font-size: 18px; /* Font size for section headings */
+    margin-bottom: 10px; /* Space below the heading */
+  }
+  
+  .footer-section ul {
+    list-style: none; /* Remove default list style */
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px; /* Space below each item */
+  }
+  
+  .footer-section ul li a {
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .footer-bottom {
+    text-align: center; /* Center align the text */
+    padding: 20px 0; /* Padding for the bottom section */
+    border-top: 1px solid #444; /* Border top for separation */
+  }
+  
+  .footer-bottom p {
+    margin: 0; /* Remove margin */
+    font-size: 14px; /* Small font size */
+  }
+  
+  .footer-bottom p a {
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  /* Social Icons Styling */
+  .footer-left .social-icons .social-icon {
+    color: #fff; /* White color for social icons */
+    font-size: 24px; /* Font size of social icons */
+    text-decoration: none; /* Remove underline from icons */
+  }
+  
+  .footer-left .social-icons .social-icon:hover {
+    color: #ddd; /* Lighter color on hover */
+  }
+  
+  /* Font Awesome Icons */
+  .fab {
+    font-family: 'Font Awesome 5 Brands'; /* Font family for Font Awesome icons */
+    font-weight: normal;
+    font-style: normal;
+    text-rendering: auto;
+  }
+  /* Example styling for the typing effect */
+  #typing-text {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 48px; /* Match this to the h1 font size */
+    font-weight: bold;
+  }
+  .small-empty-div {
+    width: 50px;  /* Set the width of the div */
+    height: 200px; /* Set the height of the div */
+    background-color: transparent; /* Optional: background color */
+    margin: 10px; /* Optional: margin to create space around the div */
+  }
+  .small-empty-dive{
+    width: 50px;  /* Set the width of the div */
+    height: 60px; /* Set the height of the div */
+    background-color: transparent; /* Optional: background color */
+    margin: 10px; /* Optional: margin to create space around the div */
+  }
+  .aboutus {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .small-empty-div {
+    width: 80%;
+    height: 5px;
+    margin: 20px auto;
+    background: linear-gradient(90deg, #f24c00, #fcaf50, grey);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .small-empty-div::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: inherit;
+    filter: blur(10px);
+  }
+  
+  .small-empty-div::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 5px;
+    background: linear-gradient(90deg, #f24c00, yellow, grey);
+    animation: move 3s linear infinite;
+  }
+  
+  @keyframes move {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 100%;
+    }
+  }
+  
+  h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333;
+  }
+  .about-us-gif {
+    width: 100px; /* Adjust width of each gif */
+    height: auto;
+    margin: 0 90px; /* Add some margin between gifs */
+    display: inline-block; /* Ensure they are displayed inline */
+  }
+  /* New Section Styling */
+  .new-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif; /* Default font for the section */
+  }
+  
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .new-section .content {
+    max-width: 50%;
+  }
+  
+  .new-section .content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif; /* Aesthetic font for the heading */
+    font-weight: 600; /* Bold style for the heading */
+  }
+  
+  .new-section .content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .new-section .create-now-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ff5733;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    animation: pulse 2s infinite;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      background-color: #ff5733;
+    }
+    50% {
+      transform: scale(1.05);
+      background-color: #cc4627;
+    }
+    100% {
+      transform: scale(1);
+      background-color: #ff5733;
+    }
+  }
+  
+  .new-section .create-now-btn:hover {
+    background-color: #1e90ff; /* Change this color as desired */
+    transform: scale(1.05);
+  }
+  
+  .new-section .image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  body {
+    
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+  }
+  
+  
+  
+  #intro {
+    background: whitesmoke;
+  }
+  
+  #aboutus {
+    background: white;
+  }
+  
+  #developers {
+    background: whitesmoke;
+  }

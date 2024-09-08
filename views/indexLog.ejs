@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/designlog.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logof.png" alt="Logo" />
+            <span class="mate">Mate</span><span class="highlight">Up</span>
+        </div>
+    </header>
+    
+    <div class="login-container">
+        <h2>Login</h2>
+       
+            <form id="login-form" action="/login" method="POST">
+            <div class="form-group">
+                <label for="username"></label>
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <p id="username-warning" class="warning hidden">Username cannot contain spaces.</p>
+            </div>
+            <div class="form-group">
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <i id="visibilityBtn"><span id="icon" class="material-icons">visibility</span></i>
+            </div>
+            
+            
+                <button type="submit">Login</button>
+                <p class="new-user">New user? <a href="/sign">Signup</a></p>
+            
+        </form>
+    </div>
+    <div class="image-container">
+        <img src="l.jpeg" alt="Background Image">
+    </div>
+    <script>
+        const visibilityBtn=document.getElementById("visibilityBtn");
+        visibilityBtn.addEventListener("click",togglevisibility);
+        function togglevisibility(){
+            const passwordInput=document.getElementById("password");
+            const icon=document.getElementById("icon");
+            if(passwordInput.type==="password"){
+                passwordInput.type="text"
+                icon.innerText="visibility_off"
+            }
+            else{
+                passwordInput.type="password"
+                icon.innerText="visibility"
+            }
+
+        }
+    </script>
+</body>
+</html>

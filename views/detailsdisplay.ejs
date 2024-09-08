@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MateUp</title>
+    <link rel="stylesheet" href="/detailsdisplaystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <img src="LOGO.png" alt="MateUp Logo" class="logo-img">
+          <div class="logo-text">
+            <span class="mate">Mate</span><span class="highlight">Up</span>
+          </div>
+        </div>
+        
+        <div class="user-menu">
+          <span id="welcome-message">Welcome, <span id="user-name"><%= currentUser.user_name %></span></span>
+          <div class="dropdown">
+            <button class="dropbtn">▼</button>
+            <div class="dropdown-content">
+              <a href="/logout" id="logout">Log out</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+    <main>
+      <div class="search-bar">
+        <form action="/detailsprint" method="get">
+        <div class="search-input">
+            <i class="fas fa-search"></i>
+            <input type="text" name="locality" placeholder="Search by locality">        </div>
+        <div class="search-input">
+                <button type="submit">Search</button>
+            </div>    
+            
+        </form>
+    </div>  
+            <div class="listings">
+              <% data.forEach(entry => { %>
+              <div class="listing-card">
+                <img src="<%= entry.u_gender === 'male' ? 'male-profile.jpeg' : 'female-profile.jpeg' %>" alt="<%= entry.u_name %>">
+                <div class="info">
+                    <h3><%= entry.u_name %></h3>
+                    <h4><i class="fas fa-map-marker-alt"></i> <%= entry.locality %></h4>
+                    <p>College:<%= entry.college_name %></p>
+                        <p>Semester: <%= entry.sem %></p>
+                        <p>Room type: <%= entry.room_type %></p>
+                    <p>Rent: ₹<%= entry.rent %></p>
+                    <p>Looking for: <%= entry.looking_for %></p>
+                </div>
+                <div class="contact">
+                    <button class="contact-button">
+                        <span class="phone-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </span>
+                        <span class="phone-text">Contact</span>
+                    </button>
+                    <div class="phone-number"><%= entry.mobile %></div>
+                </div>
+            </div>
+            <% }) %>
+                
+                <!-- More listing cards here -->
+            </div>
+            
+            <!-- Add more listing cards as needed -->
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 MateUp. All rights reserved.</p>
+    </footer>
+</body>
+</html>

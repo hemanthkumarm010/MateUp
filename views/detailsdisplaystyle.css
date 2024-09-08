@@ -1,0 +1,331 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100%;
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    background-color: whitesmoke;
+}
+body, h1, header, section, main, div, p, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    z-index: 1000; /* Ensure header is above other elements */
+    position: fixed; /* Fixed position to keep it visible */
+    top: 0; /* Position at the top of the viewport */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Full width */
+    background-color: whitesmoke; /* Light green background color */
+    color: #000; /* Black text color */
+    padding: 20px 40px; /* Padding inside the header */
+    display: flex;
+    justify-content: space-between; /* Space between logo and icons */
+    align-items: center; /* Center align items vertically */
+    height: 80px; /* Height of the header */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font for the header */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Box shadow for header */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: -70px; /* Adjust margin to move logo to the left */
+}
+
+.logo-img {
+    max-height: 182px; /* Adjust the maximum height of the logo */
+    margin-right: -40px; /* Space between logo and text */
+}
+
+.logo-text {
+    font-size: 40px; /* Adjust the font size of the logo text */
+    font-weight: bold; /* Make the text bold */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Choose a suitable font-family */
+    text-transform: none; /* Convert text to uppercase */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo-textf {
+    font-size: 40px; /* Adjust the font size of the logo text */
+    font-weight: bold; /* Make the text bold */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Choose a suitable font-family */
+    text-transform: none; /* Convert text to uppercase */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo-text .mate {
+    color: #f24c00; /* Color for the 'Mate' part */
+    font-size: 40px; /* Adjust the font size of 'Mate' */
+}
+.logo-textf .mate {
+    color: #f24c00; /* Color for the 'Mate' part */
+    font-size: 40px; /* Adjust the font size of 'Mate' */
+}
+
+.logo-text .highlight {
+    color: grey; /* Color for the 'Up' part */
+    font-size: 40px; /* Adjust the font size of 'Up' */
+    margin-left: 0px; /* Adjust space between 'Mate' and 'Up' */
+}
+.logo-textf .highlight {
+    color: grey; /* Color for the 'Up' part */
+    font-size: 40px; /* Adjust the font size of 'Up' */
+    margin-left: 0px; /* Adjust space between 'Mate' and 'Up' */
+}
+
+.navbar {
+    flex: 1; /* Take remaining space in the header */
+    text-align: right; /* Center align the nav links */
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-right: 20px; /* Space between nav items */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333; /* Link color */
+    font-size: 18px; /* Font size */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.navbar ul li a:hover {
+    color: #fcaf50; /* Orange color on hover */
+}
+.social-icon {
+    color: #000; /* Black color for social icons */
+    font-size: 24px; /* Font size of social icons */
+    text-decoration: none; /* Remove underline from icons */
+}
+
+header .social-icons {
+    display: flex;
+    gap: 15px; /* Space between social icons */
+}
+
+header .social-icon {
+    color: #000; /* Default color for social icons */
+    font-size: 24px; /* Size of the social icons */
+    text-decoration: none; /* Remove underline from links */
+}
+
+main {
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.search-bar {
+    display: flex; 
+    gap: 5px; /* Gap between input and button */
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px; /* Rounded left corners */
+    width: 70%; /* Adjust width as needed */
+}
+
+.search-bar button {
+    position: absolute; /* Position absolutely within the container */
+    top: 100px;
+    left:220px;
+    padding: 10px 20px;
+    background-color: #f24c00;
+    color: white;
+    border: 1px solid #ddd;
+    border-radius: 0 5px 5px 0; /* Rounded right corners */
+    cursor: pointer;
+}
+
+
+.listings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center align items horizontally */
+    align-items: center;
+}
+
+.listing-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(50% - 100px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.listing-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+.info {
+    flex: 1;
+}
+
+
+
+.phone-info {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center vertically */
+    margin-top: 10px; /* Adjust spacing from the hr line */
+}
+
+.phone-icon {
+    margin-right: 5px; /* Space between icon and number */
+}
+
+.phone-number {
+    font-size: 14px; /* Adjust font size as needed */
+    color: #333; /* Adjust color as needed */
+}
+
+
+
+.contact-button {
+    background: #f24c00;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Moves button to the right */
+    margin-top: 150px; /* Add margin top to move it lower */
+}
+.contact-button:hover {
+    background: grey; /* Darker shade for hover effect */
+}
+
+.phone-icon {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.phone-text {
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+.user-menu {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+  }
+  
+  .user-info {
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+    display: flex;
+    align-items: center;
+  }
+#welcome-message {
+    margin-right: 10px;
+  }
+  
+  .dropbtn {
+    background-color: #f9f9f9;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0; /* Aligns the dropdown to the left of the button */
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #ddd;
+  }
+
+  .listing-card .info {
+    flex: 1;
+}
+
+
+
+.listing-card .info h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem; /* Adjust as needed */
+}
+
+.listing-card .info p {
+    margin-bottom: 5px;
+    font-size: 0.9rem; /* Adjust as needed */
+    color: #050505; /* Adjust color as needed */
+}
+
+.listing-card .info h4 {
+    margin-right: 5px;
+    margin-top: -5px;
+    margin-bottom: 30px;
+    color: grey;
+    font-size: small;    
+    font-style: italic;
+}
+  .phone-number {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    z-index: 1000;
+}
+.contact-button:hover + .phone-number {
+    display: block;
+}

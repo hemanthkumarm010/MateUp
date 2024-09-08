@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MateUp - View History</title>
+    <link rel="stylesheet" href="/viewhistorystyle.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="LOGO.png" alt="MateUp Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="mate">Mate</span><span class="highlight">Up</span>
+            </div>
+        </div>
+        <div class="user-menu">
+            <span id="welcome-message">Welcome, <span id="user-name"><%= currentUser.user_name %></span></span>
+            <div class="dropdown">
+                <button class="dropbtn">▼</button>
+                <div class="dropdown-content">
+                    <a href="/logout" id="logout">Log out</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="white-box-section">
+            <div class="white-box">
+                <% if (posts.length > 0) { %>
+                    <% posts.forEach(post => { %>
+                        <div class="post-box">
+                            <div class="post-details">
+                            <h3><%= post.u_name %></h3>
+                            <p>College: <%= post.college_name %></p>
+                            <p>Semester: <%= post.sem %></p>
+                            <p>Room Type: <%= post.room_type %></p>
+                            <p>Rent: <%= post.rent %></p>
+                            <p>Locality: <%= post.locality %></p>
+                            <p>Contact.no: <%= post.mobile %></p>
+                            <p>Looking For: <%= post.looking_for %></p>
+                            <p>Posted on: <%= new Date(post.posted_on).toLocaleString() %></p>
+                            </div>
+                        
+                        <form action="/deletePost" method="post" class="delete-form">
+                            <input type="hidden" name="username" value="<%= currentUser.username %>">
+                            <input type="hidden" name="u_name" value="<%= post.u_name %>">
+                            <input type="hidden" name="mobile" value="<%= post.mobile %>">
+                            <button type="submit" class="delete-button">
+                                <span class="delete">Delete</span>
+                            </button>
+                        </form>
+                        </div>
+                    <% }); %>
+                <% } else { %>
+                    <p>No past posts found.</p>
+                <% } %>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

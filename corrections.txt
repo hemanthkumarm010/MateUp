@@ -1,0 +1,3 @@
+Reqired field
+password characteristics
+email and phone number

@@ -1,0 +1,637 @@
+/* Reset some default browser styles */
+body, h1, header, section, main, div, p, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    background: whitesmoke; /* Light background color */
+}
+h2,h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
+    z-index: 1000; /* Ensure header is above other elements */
+    position: fixed; /* Fixed position to keep it visible */
+    top: 0; /* Position at the top of the viewport */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Full width */
+    background-color: whitesmoke; /* Light green background color */
+    color: #000; /* Black text color */
+    padding: 20px 40px; /* Padding inside the header */
+    display: flex;
+    justify-content: space-between; /* Space between logo and icons */
+    align-items: center; /* Center align items vertically */
+    height: 80px; /* Height of the header */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font for the header */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Box shadow for header */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: -70px; /* Adjust margin to move logo to the left */
+}
+
+.logo-img {
+    max-height: 182px; /* Adjust the maximum height of the logo */
+    margin-right: -40px; /* Space between logo and text */
+}
+
+.logo-text {
+    font-size: 40px; /* Adjust the font size of the logo text */
+    font-weight: bold; /* Make the text bold */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Choose a suitable font-family */
+    text-transform: none; /* Convert text to uppercase */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo-textf {
+    font-size: 40px; /* Adjust the font size of the logo text */
+    font-weight: bold; /* Make the text bold */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Choose a suitable font-family */
+    text-transform: none; /* Convert text to uppercase */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo-text .mate {
+    color: #f24c00; /* Color for the 'Mate' part */
+    font-size: 40px; /* Adjust the font size of 'Mate' */
+}
+.logo-textf .mate {
+    color: #f24c00; /* Color for the 'Mate' part */
+    font-size: 40px; /* Adjust the font size of 'Mate' */
+}
+
+.logo-text .highlight {
+    color: grey; /* Color for the 'Up' part */
+    font-size: 40px; /* Adjust the font size of 'Up' */
+    margin-left: 0px; /* Adjust space between 'Mate' and 'Up' */
+}
+.logo-textf .highlight {
+    color: grey; /* Color for the 'Up' part */
+    font-size: 40px; /* Adjust the font size of 'Up' */
+    margin-left: 0px; /* Adjust space between 'Mate' and 'Up' */
+}
+
+.navbar {
+    flex: 1; /* Take remaining space in the header */
+    text-align: right; /* Center align the nav links */
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-right: 20px; /* Space between nav items */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333; /* Link color */
+    font-size: 18px; /* Font size */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.navbar ul li a:hover {
+    color: #fcaf50; /* Orange color on hover */
+}
+.social-icon {
+    color: #000; /* Black color for social icons */
+    font-size: 24px; /* Font size of social icons */
+    text-decoration: none; /* Remove underline from icons */
+}
+
+header .social-icons {
+    display: flex;
+    gap: 15px; /* Space between social icons */
+}
+
+header .social-icon {
+    color: #000; /* Default color for social icons */
+    font-size: 24px; /* Size of the social icons */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start (left side) of the container */
+    align-items: flex-start; /* Align items to the top of the container */
+    margin-top: 50px; /* Adjust the margin-top value to space out from the top */
+    width: 100%;
+    max-width: 1200px; /* Set a max width for the container */
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    padding: 110px;
+}
+
+.intro {
+    text-align: center;
+    margin-top: 10vh; /* Move the whole intro section down */
+}
+
+.tagline {
+    background-color: #ffcccb; /* Pink background */
+    padding: 5px 10px; /* Reduced padding */
+    display: inline-block;
+    font-size: 14px; /* Smaller font size */
+    margin-bottom: 20px;
+    border-radius: 15px; /* Rounded corners */
+}
+
+.intro h1 {
+    font-size: 48px; /* Larger font size */
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Custom font family */
+}
+
+.subtitle {
+    font-size: 24px; /* Font size for the subtitle */
+    margin-top: 10px; /* Margin to create space between h1 and subtitle */
+    color: #808080; /* Grey text color */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Custom font family */
+}
+
+.intro-image {
+    margin-top: 20px; /* Space between the subtitle and the image */
+    max-width: 60%; /* Decreased max-width to make the image smaller */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: add rounded corners to the image */
+    margin-bottom: 60px; 
+}
+
+.info-box {
+    width: 80%;
+    margin-top: 20px; /* Space between intro section and info box */
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc; /* Border for the box */
+    border-radius: 10px; /* Rounded corners for the box */
+    overflow: hidden;
+}
+
+.left-box, .right-box {
+    width: 60%;
+    padding: 20px;
+}
+
+.left-box {
+    background-color: #f9f9f9; /* Light background for left box */
+}
+
+.right-box {
+    background-color: #fff; /* White background for right box */
+}
+
+.second-section {
+    width: 80%;
+    margin-top: 40px; /* Space above the second section */
+}
+
+.white-box {
+    display: flex;
+    border: 1px solid #ccc; /* Grey line */
+}
+
+.division {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.large-box {
+    background-color: whitesmoke; /* White smoke background color */
+    padding: 40px;
+    display: none; /* Initially hidden */
+    text-align: center;
+    margin-top: 20px; /* Space above the large box */
+}
+
+.large-box.show {
+    display: block; /* Show the box when scrolled down */
+}
+/* Reset some default browser styles */
+body, h1, h2, p, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.white-box-section {
+    background-color: #f0f0f0; /* Light grey background for the section */
+    padding: 40px 0; /* Padding around the white box section */
+    text-align: center; /* Center align content */
+}
+
+.white-box {
+    display: flex;
+    justify-content: space-around; /* Space evenly between divisions */
+    align-items: center; /* Center align items vertically */
+    max-width: 1000px; /* Max width of the white box */
+    margin: 0 auto; /* Center align the box horizontally */
+    background-color: #fff; /* White background for the box */
+    border: 1px solid #ccc; /* Grey border around the box */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.grey-line {
+    width: 1px; /* Width of the grey line */
+    height: 100%; /* Full height of the box */
+    background-color: #ccc; /* Grey color for the line */
+}
+
+.left-division, .right-division {
+    flex: 1; /* Equal width for both divisions */
+    padding: 20px; /* Padding inside each division */
+}
+
+.left-division {
+    text-align: left; /* Align text to the left */
+}
+
+.right-division {
+    text-align: right; /* Align text to the right */
+}
+/* Reset some default browser styles */
+/* Reset some default browser styles */
+body, h1, h2, p, div, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Space evenly between divisions */
+    align-items: center; /* Center align items vertically */
+    max-width: 800px; /* Max width of the container */
+    margin: 0 auto; /* Center align the container horizontally */
+    background-color: #fff; /* White background for the container */
+    border: 1px solid #ccc; /* Grey border around the container */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.container::before, .container::after {
+    content: '';
+    width: 1px; /* Width of the grey line */
+    height: 100%; /* Full height of the container */
+    background-color: #ccc; /* Grey color for the line */
+}
+
+.left-division, .right-division {
+    flex: 1; /* Equal width for both divisions */
+    padding: 20px; /* Padding inside each division */
+    text-align: center; /* Center align text and images */
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align items horizontally */
+}
+
+.left-division h2, .right-division h2 {
+    margin-bottom: 10px; /* Space below each h2 */
+}
+
+.left-division img, .right-division img {
+    max-width: 50%; /* Max width of the images */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure images behave as block elements */
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 10px; 
+}
+.find-roommate-btn {
+    background-color: #f24c00; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding inside the button */
+    text-align: center; /* Center align text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline block */
+    font-size: 16px; /* Font size */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px; /* Space above the button */
+    cursor: pointer; /* Cursor pointer */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background-color */
+}
+
+.find-roommate-btn:hover {
+    background-color: gray; /* Darker green background color on hover */
+}
+footer {
+    background-color: #fcaf50; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 40px 0; /* Padding for the footer */
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Space between the sections */
+    align-items: flex-start; /* Align items at the start */
+    width: 80%;
+    margin: 0 auto; /* Center align the content */
+}
+
+.footer-left {
+    flex: 1; /* Left section takes equal space */
+}
+
+.logo-textf{
+    transform: translate(60px, 7px);
+}
+
+.footer-logo h3 {
+    font-size: 24px; /* Font size for the website name */
+    margin-bottom: 10px; /* Space below the website name */
+}
+
+.footer-left .social-icons {
+    display: flex;
+    gap: 15px; /* Space between social icons */
+}
+
+.footer-center {
+    flex: 2; /* Center section takes double space */
+    display: flex;
+    justify-content: space-between; /* Space between the sections */
+    gap: 40px; /* Space between sections */
+}
+
+.footer-section {
+    flex: 1; /* Each section takes equal space */
+}
+
+.footer-section h4 {
+    font-size: 18px; /* Font size for section headings */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.footer-section ul {
+    list-style: none; /* Remove default list style */
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px; /* Space below each item */
+}
+
+.footer-section ul li a {
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.footer-bottom {
+    text-align: center; /* Center align the text */
+    padding: 20px 0; /* Padding for the bottom section */
+    border-top: 1px solid #444; /* Border top for separation */
+}
+
+.footer-bottom p {
+    margin: 0; /* Remove margin */
+    font-size: 14px; /* Small font size */
+}
+
+.footer-bottom{
+    color: black; 
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Social Icons Styling */
+.footer-left .social-icons .social-icon {
+    color: #fff; /* White color for social icons */
+    font-size: 24px; /* Font size of social icons */
+    text-decoration: none; /* Remove underline from icons */
+}
+
+.footer-left .social-icons .social-icon:hover {
+    color: #ddd; /* Lighter color on hover */
+}
+
+/* Font Awesome Icons */
+.fab {
+    font-family: 'Font Awesome 5 Brands'; /* Font family for Font Awesome icons */
+    font-weight: normal;
+    font-style: normal;
+    text-rendering: auto;
+}
+/* Example styling for the typing effect */
+#typing-text {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 48px; /* Match this to the h1 font size */
+    font-weight: bold;
+  }
+  .logo-text .mate {
+    color: #f24c00; /* Color for the 'Mate' part */
+    font-size: 40px; /* Adjust the font size of 'Mate' */
+}
+.logo-textf .mate {
+    color: #f24c00; /* Color for the 'Mate' part */
+    font-size: 40px; /* Adjust the font size of 'Mate' */
+}
+
+.logo-text .highlight {
+    color: grey; /* Color for the 'Up' part */
+    font-size: 40px; /* Adjust the font size of 'Up' */
+    margin-left: 0px; /* Adjust space between 'Mate' and 'Up' */
+}
+.logo-textf .highlight {
+    color: grey; /* Color for the 'Up' part */
+    font-size: 40px; /* Adjust the font size of 'Up' */
+    margin-left: 0px; /* Adjust space between 'Mate' and 'Up' */
+}
+.login-btn {
+    background-color: #f24c00; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Increased padding for a bigger button */
+    text-align: center; /* Center align text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline block */
+    font-size: 18px; /* Increased font size */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family */
+    cursor: pointer; /* Cursor pointer */
+    border-radius: 8px; /* More rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background-color and transform */
+}
+body, h1, h2, p, div, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.white-box-section {
+    display: flex;
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Center the container vertically */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f0f0f0; /* Light grey background for the section */
+}
+
+.white-box {
+    display: flex;
+    justify-content: space-between; /* Space evenly between divisions */
+    align-items: center; /* Center align items vertically */
+    max-width: 900px; /* Max width of the container */
+    width: 90%; /* Responsive width */
+    background-color: white; /* Bright background color */
+    border: 5px solid #fcaf50; /* Thick black border */
+    border-radius: 12px; /* Rounded corners */
+    position: relative; /* Relative positioning for pseudo-element */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    padding: 20px; /* Padding around content */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Subtle shadow */
+}
+
+.white-box::before {
+    content: '';
+    position: absolute;
+    width: 2px; /* Width of the grey line */
+    height: 80%; /* 80% height of the container */
+    background-color: #fcaf50; /* Black color for the line */
+    left: 50%; /* Position in the middle */
+    top: 10%; /* Center vertically */
+    transform: translateX(-50%); /* Center align the line */
+}
+
+.left-division, .right-division {
+    flex: 1; /* Equal width for both divisions */
+    padding: 20px; /* Padding inside each division */
+    text-align: center; /* Center align text and images */
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align items horizontally */
+}
+
+.speech-bubble {
+    position: relative;
+    background: #fff; /* White background */
+    border: 3px solid #fcaf50; /* Thick border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px; /* Padding inside the bubble */
+    max-width: 70%; /* Maximum width of the bubble */
+    margin-bottom: 20px; /* Space below the bubble */
+    font-size: 14px; /* Font size */
+    line-height: 1.2; /* Line height */
+  }
+  
+  .speech-bubble::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px; /* Adjust to change the size and direction of the pointer */
+    border-color: #fcaf50 transparent transparent transparent; /* Matches border color */
+    bottom: -10px; /* Position the pointer below the bubble */
+    left: 50%; /* Center the pointer horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+  }
+  
+
+.left-division img, .right-division img {
+    max-width: 50%; /* Max width of the images */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure images behave as block elements */
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Space below images */
+}
+
+.find-roommate-btn {
+    background-color: #f24c00; /* Orange background color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding inside the button */
+    text-align: center; /* Center align text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline block */
+    font-size: 16px; /* Font size */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Font family */
+    margin-top: 10px; /* Space above the button */
+    cursor: pointer; /* Cursor pointer */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background-color */
+}
+
+.find-roommate-btn:hover {
+    background-color: gray; /* Darker background color on hover */
+}
+.user-menu {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+  }
+  
+  .user-info {
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+    display: flex;
+    align-items: center;
+  }
+  
+  #welcome-message {
+    margin-right: 10px;
+  }
+  
+  .dropbtn {
+    background-color: #f9f9f9;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0; /* Aligns the dropdown to the left of the button */
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #ddd;
+  }
