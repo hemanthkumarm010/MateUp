@@ -1,13 +1,6 @@
 {
-  "name": "MateUp",
-  "version": "1.0.0",
-  "main": "singin.js",
-  "scripts": {
-    "start": "node singin.js"
-  },
   "dependencies": {
-    "bcryptjs": "^3.0.2",
-    "dotenv": "^16.5.0",
+    "bcrypt": "^5.1.1",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "express-session": "^1.18.0",
